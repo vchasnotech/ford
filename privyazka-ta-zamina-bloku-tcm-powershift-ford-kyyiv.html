@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO METADATA (ЗАМІНА ТА ПРОШИВКА TCM FORD POWERSHIFT КИЇВ) -->
+    <title>Прив'язка та заміна блоку TCM PowerShift Ford Київ — Прошивка As-Built, адаптація | Telegram</title>
+    <meta name="description" content="Виїзна заміна, прошивка та прив'язка блоків TCM PowerShift (DPS6 / 6DCT250) Ford Focus 3, Fiesta у Києві. Запис конфігурації As-Built Data під VIN авто, клонування, калібрування вилок та счеплення. Приїдемо на СТО чи у двір.">
+    <meta name="keywords" content="привязка tcm powershift киев, замена блока tcm форд фокус 3 киев, прошивка tcm powershift as-built, ошибка U0101 ford focus 3, клонирование tcm powershift, адаптация tcm ford dps6 выезд, ремонт tcm powershift киев">
+
+    <!-- GOOGLE FONTS (HUD TECH STYLE) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hud: {
+                            cyan: '#00F0FF',
+                            cyanDark: '#0891B2',
+                            yellow: '#FACC15',
+                            red: '#F43F5E',
+                            bg: '#070B12',
+                            card: '#0D1524',
+                            border: '#1E293B',
+                            tg: '#229ED9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Chakra Petch', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
+                        'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
+                        'hud-red': '0 0 25px rgba(244, 63, 94, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ALPINE.JS CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- SCHEMA.ORG (TCM POWERSHIFT SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Виїзна заміна та прив'язка блоків TCM Ford PowerShift Київ",
+      "description": "Професійна заміна, програмування та прив'язка блоків управління трансмісією TCM DPS6 на автомобілях Ford Focus 3, Fiesta, EcoSport. Запис прошивки As-Built Data під VIN, повна статична та динамічна адаптація на виїзді.",
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
+        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
+        {"@type": "AdministrativeArea", "name": "Печерський район"},
+        {"@type": "AdministrativeArea", "name": "Подільський район"},
+        {"@type": "AdministrativeArea", "name": "Святошинський район"},
+        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
+      ],
+      "serviceType": [
+        "Прив'язка блоку TCM Ford PowerShift під VIN",
+        "Запис заводської прошивки As-Built Data",
+        "Статична та динамічна калібровка вилок і зчеплення DPS6",
+        "Програмне відновлення зв'язку по шині CAN (U0101)"
+      ]
+    }
+    </script>
+
+    <style>
+        .hud-border {
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            background: linear-gradient(135deg, rgba(13, 21, 36, 0.9) 0%, rgba(7, 11, 18, 0.95) 100%);
+        }
+        .digital-glow {
+            text-shadow: 0 0 12px currentColor;
+        }
+    </style>
+</head>
+<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-28 selection:bg-hud-cyan selection:text-black">
+
+    <!-- TOP TELEMETRY STATUS BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-40">
+        <div class="max-w-md mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+            <div class="flex items-center gap-2 text-hud-cyan">
+                <span class="inline-block w-2 h-2 rounded-full bg-hud-cyan animate-ping"></span>
+                <span>TCM ПРОГРАМУВАННЯ: КИЇВ</span>
+            </div>
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sm"></i>
+                <span>ONLINE У ТГ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION & CRITICAL HUD CLUSTER -->
+    <header class="px-4 pt-6 pb-6 max-w-md mx-auto">
+        
+        <!-- Category Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-cyan/10 border border-hud-cyan/40 text-hud-cyan font-tech text-xs tracking-widest uppercase rounded-sm mb-3">
+            <i class="fa-solid fa-microchip"></i>
+            <span>TCM Module • DPS6 / 6DCT250 • Ford Focus 3 / Fiesta</span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 class="font-tech text-3xl font-bold uppercase text-white leading-tight mb-4">
+            Заміна та прив'язка блоків <span class="text-hud-cyan">TCM PowerShift</span> «Під ключ» у Києві
+        </h1>
+
+        <!-- SOS DASHBOARD CLUSTER: UNCONFIGURED TCM -->
+        <div class="p-5 hud-border rounded-xl shadow-hud-cyan mb-6 relative overflow-hidden border-hud-cyan/40">
+            <div class="absolute -right-6 -bottom-6 text-7xl font-tech text-hud-cyan/5 font-bold select-none pointer-events-none">
+                TCM AS-BUILT
+            </div>
+
+            <!-- Virtual Instrument Readout -->
+            <div class="bg-black/90 border border-hud-red/60 p-3 rounded-lg mb-4">
+                <div class="flex items-center justify-between text-hud-red font-tech text-xs font-bold uppercase digital-glow mb-1">
+                    <span><i class="fa-solid fa-triangle-exclamation animate-pulse"></i> СТО прикрутило блок, а авто «мертве»?</span>
+                </div>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 mt-2">
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">VIN не збігається</span>
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">Стартер заблоковано</span>
+                    <span class="bg-slate-900 border border-slate-700 px-2 py-0.5 rounded text-slate-300">Немає зв'язку CAN</span>
+                </div>
+            </div>
+
+            <h2 class="font-tech text-lg uppercase text-white font-bold leading-tight mb-2">
+                Встановили новий або б/у модуль TCM, але Ford не заводиться?
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Механічно прикрутити блок на коробку недостатньо. Без заводської синхронізації іммобілайзера, заливки As-Built конфігурації під ваш VIN та повної адаптації авто не поїде. 
+                <strong class="text-hud-cyan">Ми приїжджаємо прямо на сервіс чи до авто та запускаємо систему «під ключ».</strong>
+            </p>
+
+            <!-- Telegram Primary CTA -->
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Прив'язати TCM через Telegram</span>
+            </a>
+            <div class="text-center text-[11px] text-slate-400 font-tech mt-2">
+                Виїзд інженера на СТО або у двір по Києву
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 2. WHY TCM DIES (TECHNICAL BACKGROUND) -->
+    <section class="px-4 py-3 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Чому модулі TCM масово виходять з ладу:
+            </h2>
+        </div>
+
+        <div class="space-y-3 font-tech">
+            
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-rose-500/10 border border-rose-500/30 text-hud-red flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-temperature-arrow-up"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Температурний удар</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Блок встановлено безпосередньо на картері коробки. Постійний нагрів від двигуна руйнує безсвинцеву пайку процесора.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 text-hud-yellow flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-droplet-slash"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Відгнивання силових контактів</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Волога та дорожні реагенти потрапляють у герметичний роз'єм, що призводить до окислення пінів живлення та помилки зв'язку CAN.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-cyan-500/10 border border-cyan-500/30 text-hud-cyan flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-file-code"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Зліт прошивки (TCM Brick)</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Спроба перепрошити модуль невідповідним софтом або дешевим обладнанням залишає блок у стані «цеглини».
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. OUR ON-SITE SOLUTION (ПОКРОКОВО ПІД КЛЮЧ) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Що ми робимо на виїзді «Під ключ»:
+            </h2>
+        </div>
+
+        <div class="space-y-3">
+            
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-hud-cyan">01.</span>
+                    <span>Підключення інженерним комплексом J2534</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Робота через спеціалізовані сервісні протоколи (FORScan / UCDS). Зчитування ідентифікаторів, оцінка стану шини та апаратного номера блоку.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-hud-yellow">02.</span>
+                    <span>Запис заводської прошивки та As-Built Data</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Завантаження чистої конфігурації саме під комплектацію вашого Ford та прив'язка коректного VIN-номера для авторизації запуску двигуна.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-hud-cyan">03.</span>
+                    <span>Статична та динамічна калібровка</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Повне навчання нейтралей і кінцевих точок вилок (Shift Fork Learn), виставлення точок торкання зчеплення A та B. 
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-emerald-400">04.</span>
+                    <span>Контрольний старт і тест усіх передач</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Запуск стартера, перевірка включення задньої (R) та всіх парних/непарних передач під навантаженням. Авто повністю готове до їзди.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Quick TG Button -->
+        <div class="mt-4">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-slate-900 border border-hud-cyan/50 text-hud-cyan hover:bg-hud-cyan hover:text-black font-tech text-base uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded-lg transition-colors text-center">
+                <i class="fa-solid fa-code"></i>
+                <span>Надіслати VIN для перевірки прошивки</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. TYPICAL DTCs FOR DEAD/UNPROGRAMMED TCM -->
+    <section class="px-4 py-6 max-w-md mx-auto" x-data="{ openItem: null }">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="w-2.5 h-2.5 bg-hud-red rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Помилки мертвого або неприв'язаного TCM:
+            </h2>
+        </div>
+        <p class="text-xs text-slate-400 mb-4 font-tech">Торкніться коду для отримання розшифровки:</p>
+
+        <div class="space-y-2.5">
+            
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 1 ? null : 1)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">U0101</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Lost Communication with TCM</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 1 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 1" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Повна втрата зв'язку з блоком управління коробкою. Перевіряємо силові ланцюги, відновлюємо контакт або проводимо заміну з подальшим кодуванням.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 2 ? null : 2)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">P0606</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">ECM / TCM Processor Fault</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 2 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 2" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Внутрішній апаратний збій мікроконтролера через перегрів. Потрібна фізична заміна модуля та прив'язка донора під VIN конкретного авто.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 3 ? null : 3)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-lg">U0401</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Invalid Data from ECM / TCM</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 3 ? 'rotate-180 text-hud-yellow' : ''"></i>
+                </button>
+                <div x-show="openItem === 3" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Блок встановлено від іншого авто, VIN або конфігурація не відповідають системі безпеки. Усувається заливкою коректних даних As-Built.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 4 ? null : 4)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-lg">P0882</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">TCM Power Input Low</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 4 ? 'rotate-180 text-hud-yellow' : ''"></i>
+                </button>
+                <div x-show="openItem === 4" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Критичне просідання напруги на внутрішніх драйверах або відгнивання силових контактів живлення блоку.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. DISTRICTS OF SERVICE (KYIV) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="p-5 hud-border rounded-xl">
+            <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-location-dot text-hud-cyan"></i>
+                <h2 class="font-tech text-lg font-bold uppercase text-white tracking-wide">
+                    Виїзд до СТО чи паркінгу по Києву:
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Солом'янський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Голосіївський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Печерський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Подільський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Святошинський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Шевченківський</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. FINAL BOTTOM CTA BLOCK -->
+    <section class="px-4 py-8 max-w-md mx-auto text-center">
+        <div class="p-6 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan">
+            <h2 class="font-tech text-2xl font-bold uppercase text-white mb-2 leading-tight">
+                СТО не може прописати блок TCM?
+            </h2>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed font-sans">
+                Не витрачайте час на перетягування автомобіля на інші сервіси. Напишіть у Telegram — ми приїдемо зі спецсофтом та запустимо авто на місці.
+            </p>
+
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Зв'язатися з майстром у Telegram</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 7. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl">
+        <div class="max-w-md mx-auto">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
+                <i class="fa-brands fa-telegram text-2xl animate-pulse"></i>
+                <span>Прив'язати TCM • Чат Telegram</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

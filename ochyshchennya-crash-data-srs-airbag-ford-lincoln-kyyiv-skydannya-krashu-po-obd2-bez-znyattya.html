@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO METADATA (CRASH DATA FORD LINCOLN КИЇВ) -->
+    <title>Очищення Crash Data SRS Airbag Ford Lincoln Київ — Скидання крашу по OBD2 без зняття | Telegram</title>
+    <meta name="description" content="Виїзне скидання та очищення Crash Data в блоках SRS Airbag (RCM) на Ford Fusion, Escape, Explorer, Mustang, Edge, Lincoln MKZ зі США. Програмно через роз'єм OBD2 без розбирання консолі та пайки мікросхем у Києві.">
+    <meta name="keywords" content="очистка crash data форд киев, сброс краш дата форд фьюжн без снятия, сбросить краш airbag ford escape obd2, блок rcm форд эксплорер краш дата, прошивка блока подушек lincoln mkz киев, ошибка B1193 crash event storage full, удаление краш дата ford mustang выезд">
+
+    <!-- GOOGLE FONTS (HUD TECH STYLE) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hud: {
+                            cyan: '#00F0FF',
+                            cyanDark: '#0891B2',
+                            yellow: '#FACC15',
+                            red: '#F43F5E',
+                            bg: '#070B12',
+                            card: '#0D1524',
+                            border: '#1E293B',
+                            tg: '#229ED9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Chakra Petch', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
+                        'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
+                        'hud-red': '0 0 25px rgba(244, 63, 94, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ALPINE.JS CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- SCHEMA.ORG (CRASH DATA RCM SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Виїзне очищення Crash Data SRS Airbag Ford Lincoln Київ",
+      "description": "Спеціалізоване програмне стирання Crash Data та скидання помилки блокування блоку RCM (B1193) на автомобілях Ford Fusion, Escape, Explorer, Edge, Mustang та Lincoln через діагностичний порт OBD2 без демонтажу блоку.",
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
+        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
+        {"@type": "AdministrativeArea", "name": "Печерський район"},
+        {"@type": "AdministrativeArea", "name": "Подільський район"},
+        {"@type": "AdministrativeArea", "name": "Святошинський район"},
+        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
+      ],
+      "serviceType": [
+        "Очищення Crash Data по OBD2 без демонтажу",
+        "Скидання критичної помилки B1193 / B1206",
+        "Введення в експлуатацію блоку RCM після відновлення подушок",
+        "Адаптація та налаштування безпеки SRS Ford USA"
+      ]
+    }
+    </script>
+
+    <style>
+        .hud-border {
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            background: linear-gradient(135deg, rgba(13, 21, 36, 0.9) 0%, rgba(7, 11, 18, 0.95) 100%);
+        }
+        .digital-glow {
+            text-shadow: 0 0 12px currentColor;
+        }
+    </style>
+</head>
+<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-28 selection:bg-hud-cyan selection:text-black">
+
+    <!-- TOP TELEMETRY STATUS BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-40">
+        <div class="max-w-md mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+            <div class="flex items-center gap-2 text-hud-cyan">
+                <span class="inline-block w-2 h-2 rounded-full bg-hud-cyan animate-ping"></span>
+                <span>SRS RESET: КИЇВ (OBD2)</span>
+            </div>
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sm"></i>
+                <span>ONLINE У ТГ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION & CRITICAL HUD CLUSTER -->
+    <header class="px-4 pt-6 pb-6 max-w-md mx-auto">
+        
+        <!-- Category Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-cyan/10 border border-hud-cyan/40 text-hud-cyan font-tech text-xs tracking-widest uppercase rounded-sm mb-3">
+            <i class="fa-solid fa-shield-halved"></i>
+            <span>Ford & Lincoln USA • SRS RCM Module • 2015–2024</span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 class="font-tech text-3xl font-bold uppercase text-white leading-tight mb-4">
+            Очищення <span class="text-hud-cyan">Crash Data</span> (SRS Airbag) без зняття блоку в Києві
+        </h1>
+
+        <!-- SOS DASHBOARD CLUSTER: CRASH EVENT -->
+        <div class="p-5 hud-border rounded-xl shadow-hud-red mb-6 relative overflow-hidden border-rose-500/50">
+            <div class="absolute -right-6 -bottom-6 text-7xl font-tech text-hud-red/5 font-bold select-none pointer-events-none">
+                AIRBAG
+            </div>
+
+            <!-- Virtual Instrument Readout -->
+            <div class="bg-black/90 border border-hud-red/60 p-3 rounded-lg mb-4">
+                <div class="flex items-center gap-2.5 text-hud-red font-tech text-sm font-bold uppercase digital-glow mb-1">
+                    <i class="fa-solid fa-triangle-exclamation animate-pulse"></i>
+                    <span>Crash Event Recorded / Блок RCM заблоковано</span>
+                </div>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 mt-2">
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">B1193 Crash Full</span>
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">Airbag світиться постійно</span>
+                    <span class="bg-emerald-950/60 border border-emerald-800/80 px-2 py-0.5 rounded text-emerald-300">Стирання по OBD2</span>
+                </div>
+            </div>
+
+            <h2 class="font-tech text-lg uppercase text-white font-bold leading-tight mb-2">
+                Відновлюєте «биток» зі США і горить помилка подушок безпеки?
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Після ДТП у блок RCM прописується незмивний запис про зіткнення, який не видаляється звичайними діагностичними сканерами. 
+                <strong class="text-hud-cyan">На більшості моделей Ford та Lincoln від ~2015 року ми очищаємо аварійний сектор програмно через роз'єм OBD2!</strong>
+            </p>
+
+            <!-- Telegram Primary CTA -->
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Скинути Crash через Telegram</span>
+            </a>
+            <div class="text-center text-[11px] text-slate-400 font-tech mt-2">
+                15-20 хвилин на авто • Без розбирання консолі та пайки
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 2. THE KILLER ADVANTAGE: OBD2 VS DISSASSEMBLY -->
+    <section class="px-4 py-3 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Чому очищення по OBD2 вигідніше:
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-1 gap-3 font-tech">
+            
+            <!-- Modern Method -->
+            <div class="p-4 bg-hud-card border-2 border-hud-cyan/50 rounded-lg relative overflow-hidden">
+                <div class="flex items-center gap-2 text-hud-cyan font-bold text-sm uppercase mb-1">
+                    <i class="fa-solid fa-circle-check text-base"></i>
+                    <span>Наш метод: Спеціальне ПЗ через OBD2</span>
+                </div>
+                <ul class="text-xs text-slate-300 font-sans space-y-1.5 mt-2">
+                    <li>⚡ <strong>Без розбирання салону:</strong> підлокітник, тунель і консоль залишаються недоторканими.</li>
+                    <li>⚡ <strong>Без пайки:</strong> плата блоку RCM не гріється феном і не випаюються чіпи пам'яті.</li>
+                    <li>⚡ <strong>Швидкість:</strong> уся процедура триває до 20 хвилин прямо у дворі, малярці чи на СТО.</li>
+                </ul>
+            </div>
+
+            <!-- Old Method -->
+            <div class="p-4 bg-slate-950/70 border border-slate-800 rounded-lg opacity-80">
+                <div class="flex items-center gap-2 text-rose-400 font-bold text-sm uppercase mb-1">
+                    <i class="fa-solid fa-circle-xmark text-base"></i>
+                    <span>Застарілий кустарний метод</span>
+                </div>
+                <p class="text-xs text-slate-400 font-sans leading-relaxed mt-1">
+                    Демонтаж усього пластику тунелю підлоги, викручування блоку, розтин корпусу, випаювання EEPROM/процесора з ризиком пошкодити плату та зламати кріплення салону.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. SUPPORTED VEHICLES (POPULAR USA COPART FLEET) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Моделі авто, що підтримуються:
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford Fusion</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford Escape</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford Explorer</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford Mustang</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford Edge</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-car text-hud-cyan"></i>
+                <span class="text-white font-bold">Ford F-150</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-crown text-hud-yellow"></i>
+                <span class="text-white font-bold">Lincoln MKZ</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded flex items-center gap-2">
+                <i class="fa-solid fa-crown text-hud-yellow"></i>
+                <span class="text-white font-bold">Lincoln MKC / Nautilus</span>
+            </div>
+        </div>
+
+        <!-- Quick TG Send Model Button -->
+        <div class="mt-4">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-slate-900 border border-hud-cyan/50 text-hud-cyan hover:bg-hud-cyan hover:text-black font-tech text-base uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded-lg transition-colors text-center">
+                <i class="fa-brands fa-telegram text-lg"></i>
+                <span>Уточнити сумісність моделі у ТГ</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. WHAT WE DO ON-SITE -->
+    <section class="px-4 py-4 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Що входить у послугу:
+            </h2>
+        </div>
+
+        <div class="space-y-3">
+            
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg">
+                <h3 class="font-tech text-base uppercase text-white font-bold">01. Очищення віртуального сектора аварії</h3>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Спеціалізоване ПЗ стирає зафіксовані дані про зіткнення у внутрішній пам'яті блоку RCM за сервісним OBD2-протоколом.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <h3 class="font-tech text-base uppercase text-white font-bold">02. Скидання супутніх помилок</h3>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Видалення критичних блокувань піропатронів ременів, штор, колінних та фронтальних подушок безпеки по всій системі SRS.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-lg">
+                <h3 class="font-tech text-base uppercase text-white font-bold">03. Введення системи в експлуатацію</h3>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Повна ініціалізація блоку RCM після заміни піропатронів на нові або встановлення сервісних емуляторів. Індикатор подушок гасне штатно!
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. CRITICAL SRS ERROR CODES -->
+    <section class="px-4 py-6 max-w-md mx-auto" x-data="{ openItem: null }">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="w-2.5 h-2.5 bg-hud-red rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Типові коди після удару (Crash):
+            </h2>
+        </div>
+        <p class="text-xs text-slate-400 mb-4 font-tech">Торкніться коду для отримання опису помилки:</p>
+
+        <div class="space-y-2.5">
+            
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 1 ? null : 1)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">B1193</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Crash Event Storage Full</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 1 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 1" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Пам'ять блоку переповнена подіями удару, блок RCM апаратно заблокований і відмовляється функціонувати. Звичайними сканерами не стирається — очищається нашим спецсофтом.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 2 ? null : 2)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">B1206</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Crash Event Output Notification</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 2 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 2" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Зафіксовано спрацювання елементів пасивної безпеки (подушок або натягувачів ременів). Помилка скидається синхронно з очищенням крашу.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 3 ? null : 3)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-lg">B0001 - B0052</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Driver / Passenger Deploy Loops</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 3 ? 'rotate-180 text-hud-yellow' : ''"></i>
+                </button>
+                <div x-show="openItem === 3" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Опір ланцюгів піропатронів поза межами норми після вистрілу. Проводимо тестування опору після заміни подушок або встановлення емуляторів.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. DISTRICTS OF SERVICE (KYIV) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="p-5 hud-border rounded-xl">
+            <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-location-dot text-hud-cyan"></i>
+                <h2 class="font-tech text-lg font-bold uppercase text-white tracking-wide">
+                    Виїзд до малярок, СТО чи гаражів Києва:
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Солом'янський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Голосіївський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Печерський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Подільський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Святошинський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Шевченківський</div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2 font-tech">
+                *Приїжджаємо безпосередньо туди, де автомобіль готується чи збирається після кузовного ремонту.
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. FINAL BOTTOM CTA BLOCK -->
+    <section class="px-4 py-8 max-w-md mx-auto text-center">
+        <div class="p-6 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan">
+            <h2 class="font-tech text-2xl font-bold uppercase text-white mb-2 leading-tight">
+                Потрібно погасити Airbag після ДТП?
+            </h2>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed font-sans">
+                Не знімайте тунель та не віддавайте блок під паяльник! Напишіть у Telegram — підключимося по OBD2 та зітремо краш прямо в авто.
+            </p>
+
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Написати в Telegram майстру</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 8. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl">
+        <div class="max-w-md mx-auto">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
+                <i class="fa-brands fa-telegram text-2xl animate-pulse"></i>
+                <span>Очистити Crash Data • Telegram</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

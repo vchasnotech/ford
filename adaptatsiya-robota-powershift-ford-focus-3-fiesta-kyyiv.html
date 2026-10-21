@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO METADATA (FORD POWERSHIFT КИЇВ) -->
+    <title>Адаптація робота PowerShift Ford Focus 3, Fiesta Київ — Transmission Fault, пропадають передачі | Telegram</title>
+    <meta name="description" content="Терміновий виїзд: реанімація та адаптація КПП PowerShift (DPS6 / 6DCT250) Ford Focus 3, Fiesta, EcoSport у Києві. Зникла задня R, парні або непарні передачі? Помилка Transmission Fault, авто смикається, не крутить стартер. Виїзд по 6 районах без евакуатора.">
+    <meta name="keywords" content="адаптація powershift київ, адаптация powershift форд фокус 3 киев выезд, пропали передачи powershift, transmission fault ford focus 3, обучение сцепления powershift dps6, пропала задняя передача форд фокус 3, адаптация вилок powershift киев, сброс tcm ford powershift">
+
+    <!-- GOOGLE FONTS (HUD TECH STYLE) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hud: {
+                            cyan: '#00F0FF',
+                            cyanDark: '#0891B2',
+                            yellow: '#FACC15',
+                            red: '#F43F5E',
+                            bg: '#070B12',
+                            card: '#0D1524',
+                            border: '#1E293B',
+                            tg: '#229ED9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Chakra Petch', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
+                        'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
+                        'hud-red': '0 0 25px rgba(244, 63, 94, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ALPINE.JS CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- SCHEMA.ORG (FORD POWERSHIFT SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Виїзна адаптація та реанімація робота Ford PowerShift Київ",
+      "description": "Спеціалізована діагностика, адаптація зчеплення Clutch Adaptive Learn та вилок Shift Fork коробки PowerShift DPS6 / 6DCT250 на Ford Focus 3, Fiesta, EcoSport. Програмний сброс TCM, усунення ривків та блокування стартера.",
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
+        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
+        {"@type": "AdministrativeArea", "name": "Печерський район"},
+        {"@type": "AdministrativeArea", "name": "Подільський район"},
+        {"@type": "AdministrativeArea", "name": "Святошинський район"},
+        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
+      ],
+      "serviceType": [
+        "Обучение точки касания сцепления PowerShift (Clutch Adaptive Learn)",
+        "Обучение вилок переключения передач (Shift Fork Adaptive Learn)",
+        "Программный сброс адаптаций TCM Ford",
+        "Устранение ошибки Transmission Fault на выезде"
+      ]
+    }
+    </script>
+
+    <style>
+        .hud-border {
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            background: linear-gradient(135deg, rgba(13, 21, 36, 0.9) 0%, rgba(7, 11, 18, 0.95) 100%);
+        }
+        .digital-glow {
+            text-shadow: 0 0 12px currentColor;
+        }
+    </style>
+</head>
+<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-28 selection:bg-hud-cyan selection:text-black">
+
+    <!-- TOP TELEMETRY STATUS BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-40">
+        <div class="max-w-md mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+            <div class="flex items-center gap-2 text-hud-cyan">
+                <span class="inline-block w-2 h-2 rounded-full bg-hud-cyan animate-ping"></span>
+                <span>FORD POWERSHIFT: КИЇВ</span>
+            </div>
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sm"></i>
+                <span>ONLINE У ТГ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION & CRITICAL HUD CLUSTER -->
+    <header class="px-4 pt-6 pb-6 max-w-md mx-auto">
+        
+        <!-- Category Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-cyan/10 border border-hud-cyan/40 text-hud-cyan font-tech text-xs tracking-widest uppercase rounded-sm mb-3">
+            <i class="fa-solid fa-car-side"></i>
+            <span>Focus 3 • Fiesta • EcoSport • B-Max (DPS6 / 6DCT250)</span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 class="font-tech text-3xl font-bold uppercase text-white leading-tight mb-4">
+            Виїзна адаптація та порятунок робота <span class="text-hud-cyan">PowerShift</span> у Києві
+        </h1>
+
+        <!-- SOS DASHBOARD CLUSTER: TRANSMISSION FAULT -->
+        <div class="p-5 hud-border rounded-xl shadow-hud-red mb-6 relative overflow-hidden border-rose-500/50">
+            <div class="absolute -right-6 -bottom-6 text-7xl font-tech text-hud-red/5 font-bold select-none pointer-events-none">
+                POWERSHIFT
+            </div>
+
+            <!-- Virtual Instrument Readout -->
+            <div class="bg-black/90 border border-hud-red/60 p-3 rounded-lg mb-4">
+                <div class="flex items-center gap-2.5 text-hud-red font-tech text-sm font-bold uppercase digital-glow mb-1">
+                    <i class="fa-solid fa-triangle-exclamation animate-pulse"></i>
+                    <span>Transmission Fault / Несправність</span>
+                </div>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 mt-2">
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">Немає R / 2 / 4 / 6</span>
+                    <span class="bg-rose-950/60 border border-rose-800/80 px-2 py-0.5 rounded text-rose-300">Немає 1 / 3 / 5</span>
+                    <span class="bg-amber-950/60 border border-amber-800/80 px-2 py-0.5 rounded text-amber-300">Стартер мовчить</span>
+                </div>
+            </div>
+
+            <h2 class="font-tech text-lg uppercase text-white font-bold leading-tight mb-2">
+                Машина смикається в заторах, зникла задня передача або не заводиться?
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                Сухе подвійне зчеплення DPS6 втратило робочі зазори, або блок TCM видав аварійне блокування вилок перемикання. 
+                <strong class="text-hud-cyan">Ми підключаємося до трансмісії безпосередньо у вашому дворі, на паркінгу чи сторонньому СТО</strong> без витрат на евакуатор.
+            </p>
+
+            <!-- Telegram Primary CTA -->
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Написати майстру в Telegram</span>
+            </a>
+            <div class="text-center text-[11px] text-slate-400 font-tech mt-2">
+                Відповідаємо за 2-3 хвилини • Консультація та виїзд
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 2. WHAT WE DO ON-SITE (3 MAIN PILLARS) -->
+    <section class="px-4 py-3 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Що ми робимо на виїзді:
+            </h2>
+        </div>
+
+        <div class="space-y-3 font-tech">
+            
+            <div class="p-4 bg-hud-card border border-hud-border rounded-lg">
+                <div class="flex items-center gap-3 text-hud-cyan mb-1.5">
+                    <i class="fa-solid fa-sliders text-lg"></i>
+                    <h3 class="text-base uppercase font-bold text-white">Clutch Adaptive Learn</h3>
+                </div>
+                <p class="text-sm text-slate-300 font-sans leading-snug">
+                    Покрокове навчання точки торкання обох зчеплень (диски A і B). Прибирає вібрації, тремтіння кузова та жорсткі удари при рушанні з місця.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border border-hud-border rounded-lg">
+                <div class="flex items-center gap-3 text-hud-yellow mb-1.5">
+                    <i class="fa-solid fa-code-fork text-lg"></i>
+                    <h3 class="text-base uppercase font-bold text-white">Shift Fork Adaptive Learn</h3>
+                </div>
+                <p class="text-sm text-slate-300 font-sans leading-snug">
+                    Калібрування положення вилок перемикання передач. Повертає в роботу зниклі парні (2-4-6, R) або непарні (1-3-5) передачі без заміни коробки.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border border-hud-border rounded-lg">
+                <div class="flex items-center gap-3 text-hud-red mb-1.5">
+                    <i class="fa-solid fa-rotate-left text-lg"></i>
+                    <h3 class="text-base uppercase font-bold text-white">TCM Adaptive Reset</h3>
+                </div>
+                <p class="text-sm text-slate-300 font-sans leading-snug">
+                    Повний програмний скид накопичених помилок блоку управління трансмісією. Зняття аварійного режиму та розблокування запуску двигуна.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. DETAILED PAIN POINTS (MOBILE HUD CARDS) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Симптоми аварії PowerShift:
+            </h2>
+        </div>
+
+        <div class="space-y-3">
+            
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center justify-between">
+                    <span>Зникла задня передача (R) та 2-4-6</span>
+                    <i class="fa-solid fa-ban text-hud-red"></i>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug">
+                    Заклинювання вилки B або критичний збій калібрування другого контуру зчеплення. Автомобіль рухається лише на 1-3-5 передачах.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-red border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center justify-between">
+                    <span>Авто не заводиться (стартер мовчить)</span>
+                    <i class="fa-solid fa-key text-hud-red"></i>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug">
+                    Блок TCM не може підтвердити нейтральне положення барабанів вибору передач та забороняє подачу живлення на втягуюче реле стартера.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center justify-between">
+                    <span>Сильна вібрація та копняки при старті</span>
+                    <i class="fa-solid fa-wave-square text-hud-yellow"></i>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug">
+                    Робочі диски змикаються несинхронно через збиті точки торкання. Машина здригається, немов новачок кидає зчеплення на механіці.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center justify-between">
+                    <span>Зависання передач та провали тяги</span>
+                    <i class="fa-solid fa-gauge-simple-high text-hud-yellow"></i>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug">
+                    Оберти мотора злітають у червону зону, але коробка «думає» кілька секунд перед тим, як перемкнути передачу далі.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Quick TG Send Photo Button -->
+        <div class="mt-4">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-slate-900 border border-hud-cyan/50 text-hud-cyan hover:bg-hud-cyan hover:text-black font-tech text-base uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded-lg transition-colors text-center">
+                <i class="fa-solid fa-camera"></i>
+                <span>Надіслати фото помилки на щитку в ТГ</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 4. POWERSHIFT DTC CODES DIRECTORY -->
+    <section class="px-4 py-6 max-w-md mx-auto" x-data="{ openItem: null }">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Коди несправностей PowerShift:
+            </h2>
+        </div>
+        <p class="text-xs text-slate-400 mb-4 font-tech">Торкніться коду помилки для перегляду рішення:</p>
+
+        <div class="space-y-2.5">
+            
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 1 ? null : 1)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">P2832 / P2837</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Shift Fork Position Error</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 1 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 1" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3">
+                    Невідповідність положення вилок перемикання передач. Проводимо повний тест актуаторів A/B та заново калібруємо кінцеві упори вилок у картері коробки.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 2 ? null : 2)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-red text-lg">P2872 / P287A</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Clutch A/B Stuck Engaged</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 2 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 2" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3">
+                    Зависання зчеплення у замкнутому положенні. Скидаємо аварійні параметри, проводимо процедуру розведення диска та адаптивне навчання точки зачеплення.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 3 ? null : 3)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-lg">P090C / P090D</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">Clutch Actuator Motor Circuit</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 3 ? 'rotate-180 text-hud-yellow' : ''"></i>
+                </button>
+                <div x-show="openItem === 3" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3">
+                    Збій у ланцюзі моторів приводу зчеплення A або B. Перевіряємо силові роз'єми блоку TCM, тестуємо опір обмоток та адаптуємо крокові положення.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 4 ? null : 4)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-lg">P0882 / U0101</span>
+                    <span class="font-tech text-sm text-white flex-1 mx-3 uppercase">TCM Communication / Power</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform" :class="openItem === 4 ? 'rotate-180 text-hud-yellow' : ''"></i>
+                </button>
+                <div x-show="openItem === 4" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3">
+                    Втрата зв'язку з блоком управління трансмісією або провал живлення. Спеціаліст проводить локалізацію контактної групи та програмне перезавантаження модуля.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 5. DISTRICTS OF SERVICE (KYIV) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="p-5 hud-border rounded-xl">
+            <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-location-dot text-hud-cyan"></i>
+                <h2 class="font-tech text-lg font-bold uppercase text-white tracking-wide">
+                    Виїзд по 6 районах Києва:
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Солом'янський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Голосіївський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Печерський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Подільський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Святошинський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Шевченківський</div>
+            </div>
+
+            <p class="text-[11px] text-slate-400 mt-3 font-tech leading-tight">
+                *Прибуваємо на сторонні СТО, у житлові двори, підземні паркінги або на місце поломки в дорозі.
+            </p>
+        </div>
+    </section>
+
+    <!-- 6. 3-STEP RECOVERY PROCESS -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide mb-4 flex items-center gap-2">
+            <span class="w-2.5 h-2.5 bg-emerald-400 rounded-sm"></span>
+            <span>Етапи відновлення:</span>
+        </h2>
+
+        <div class="space-y-3 font-tech">
+            <div class="flex items-start gap-3 p-3.5 bg-hud-card border border-hud-border rounded-lg">
+                <span class="text-hud-cyan font-bold text-lg">01.</span>
+                <div>
+                    <h3 class="text-sm font-bold uppercase text-white">Запит у Telegram</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5">Вкажіть модель Ford (Focus, Fiesta тощо) та опишіть проблему чи скиньте фото панелі.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 bg-hud-card border border-hud-border rounded-lg">
+                <span class="text-hud-yellow font-bold text-lg">02.</span>
+                <div>
+                    <h3 class="text-sm font-bold uppercase text-white">Прибуття спеціаліста</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5">Майстер виїжджає на місце стоянки з комплексом профільного обладнання для PowerShift.</p>
+                </div>
+            </div>
+
+            <div class="flex items-start gap-3 p-3.5 bg-hud-card border border-hud-border rounded-lg">
+                <span class="text-emerald-400 font-bold text-lg">03.</span>
+                <div>
+                    <h3 class="text-sm font-bold uppercase text-white">Адаптація та запуск</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5">Скидання TCM, навчання точок торкання зчеплення, калібрування передач і тест у русі.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7. FINAL BOTTOM CTA BLOCK -->
+    <section class="px-4 py-8 max-w-md mx-auto text-center">
+        <div class="p-6 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan">
+            <h2 class="font-tech text-2xl font-bold uppercase text-white mb-2 leading-tight">
+                Ford знерухомлений або коробка в аварії?
+            </h2>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed">
+                Не поспішайте замовляти евакуатор чи купувати нове счеплення. Напишіть зараз — ми перевіримо стан AllShift/PowerShift прямо біля вашого авто.
+            </p>
+
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Зв'язатися в Telegram</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 8. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl">
+        <div class="max-w-md mx-auto">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
+                <i class="fa-brands fa-telegram text-2xl animate-pulse"></i>
+                <span>Написати майстру в Telegram</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="uk" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- SEO METADATA (FORD POWERSHIFT 6DCT450 MPS6 КИЇВ) -->
+    <title>Адаптація мокрого PowerShift 6DCT450 (MPS6) Ford Kuga, Mondeo Київ — Пинки 2-1 | Telegram</title>
+    <meta name="description" content="Виїзна адаптація мокрої роботизованої КПП PowerShift 6DCT450 / MPS6 на дизельних Ford Kuga, Mondeo 4/5, S-Max 2.0 TDCi у Києві. Калібрування соленоїдів тиску та зчеплення після заміни оливи або демпфера. Усунення ударів з 2 на 1 передачу.">
+    <meta name="keywords" content="адаптація powershift 6dct450 київ, адаптация мокрого робота форд куга, пинается powershift со 2 на 1 передачу, адаптация mps6 форд мондео дизель, калибровка сцепления 6dct450 выезд киев, пинки после замены масла powershift kuga, адаптация гидроплиты mps6">
+
+    <!-- GOOGLE FONTS (HUD TECH STYLE) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- TAILWIND CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        hud: {
+                            cyan: '#00F0FF',
+                            cyanDark: '#0891B2',
+                            yellow: '#FACC15',
+                            red: '#F43F5E',
+                            bg: '#070B12',
+                            card: '#0D1524',
+                            border: '#1E293B',
+                            tg: '#229ED9',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        tech: ['Chakra Petch', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'hud-cyan': '0 0 25px rgba(0, 240, 255, 0.35)',
+                        'hud-yellow': '0 0 20px rgba(250, 204, 21, 0.25)',
+                        'hud-tg': '0 0 30px rgba(34, 158, 217, 0.5)',
+                        'hud-red': '0 0 25px rgba(244, 63, 94, 0.4)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- FONT AWESOME ICONS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- ALPINE.JS CDN -->
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <!-- SCHEMA.ORG (MPS6 WET POWERSHIFT SERVICE) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "AutoRepair",
+      "name": "Адаптація мокрих роботів Ford PowerShift 6DCT450 MPS6 Київ",
+      "description": "Професійне виїзне калібрування соленоїдів гідроблоку, точок контакту мокрого зчеплення та вилок КПП 6DCT450 (MPS6) на дизельних автомобілях Ford Kuga, Mondeo, S-Max 2.0 TDCi після заміни оливи чи демпфера.",
+      "areaServed": [
+        {"@type": "AdministrativeArea", "name": "Солом'янський район"},
+        {"@type": "AdministrativeArea", "name": "Голосіївський район"},
+        {"@type": "AdministrativeArea", "name": "Печерський район"},
+        {"@type": "AdministrativeArea", "name": "Подільський район"},
+        {"@type": "AdministrativeArea", "name": "Святошинський район"},
+        {"@type": "AdministrativeArea", "name": "Шевченківський район"}
+      ],
+      "serviceType": [
+        "Калібрування соленоїдів тиску мокрого зчеплення PowerShift",
+        "Адаптація 6DCT450 після регламентної заміни мастила",
+        "Навчання точки дотику після заміни демпфера або пакету фрикціонів",
+        "Усунення ударів та поштовхів при перемиканні 2 -> 1"
+      ]
+    }
+    </script>
+
+    <style>
+        .hud-border {
+            border: 1px solid rgba(0, 240, 255, 0.25);
+            background: linear-gradient(135deg, rgba(13, 21, 36, 0.9) 0%, rgba(7, 11, 18, 0.95) 100%);
+        }
+        .digital-glow {
+            text-shadow: 0 0 12px currentColor;
+        }
+    </style>
+</head>
+<body class="bg-hud-bg text-slate-100 font-sans antialiased pb-28 selection:bg-hud-cyan selection:text-black">
+
+    <!-- TOP TELEMETRY STATUS BAR -->
+    <div class="border-b border-hud-border/80 bg-slate-950/90 backdrop-blur-md px-4 py-2 sticky top-0 z-40">
+        <div class="max-w-md mx-auto flex items-center justify-between text-xs font-tech tracking-wider">
+            <div class="flex items-center gap-2 text-hud-cyan">
+                <span class="inline-block w-2 h-2 rounded-full bg-hud-cyan animate-ping"></span>
+                <span>WET POWERSHIFT: КИЇВ</span>
+            </div>
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="text-hud-tg hover:underline font-bold flex items-center gap-1.5">
+                <i class="fa-brands fa-telegram text-sm"></i>
+                <span>ONLINE У ТГ</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- 1. HERO SECTION & CRITICAL HUD CLUSTER -->
+    <header class="px-4 pt-6 pb-6 max-w-md mx-auto">
+        
+        <!-- Category Pill -->
+        <div class="inline-flex items-center gap-2 px-3 py-1 bg-hud-cyan/10 border border-hud-cyan/40 text-hud-cyan font-tech text-xs tracking-widest uppercase rounded-sm mb-3">
+            <i class="fa-solid fa-droplet"></i>
+            <span>Мокрий робот • 6DCT450 / MPS6 • Ford 2.0 TDCi</span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 class="font-tech text-3xl font-bold uppercase text-white leading-tight mb-4">
+            Адаптація <span class="text-hud-cyan">мокрих PowerShift</span> (6DCT450) Ford у Києві
+        </h1>
+
+        <!-- SOS DASHBOARD CLUSTER: 2->1 SHIFT KICK -->
+        <div class="p-5 hud-border rounded-xl shadow-hud-yellow mb-6 relative overflow-hidden border-amber-500/50">
+            <div class="absolute -right-6 -bottom-6 text-7xl font-tech text-hud-yellow/5 font-bold select-none pointer-events-none">
+                MPS6
+            </div>
+
+            <!-- Virtual Instrument Readout -->
+            <div class="bg-black/90 border border-hud-yellow/60 p-3 rounded-lg mb-4">
+                <div class="flex items-center gap-2 text-hud-yellow font-tech text-xs font-bold uppercase digital-glow mb-1">
+                    <i class="fa-solid fa-triangle-exclamation animate-pulse"></i>
+                    <span>Типова проблема після ТО або заміни зчеплення</span>
+                </div>
+                <div class="flex flex-wrap gap-2 text-[11px] font-mono text-slate-300 mt-2">
+                    <span class="bg-amber-950/60 border border-amber-800/80 px-2 py-0.5 rounded text-amber-300">Удар 2-я ➔ 1-я перед зупинкою</span>
+                    <span class="bg-slate-900 border border-slate-700 px-2 py-0.5 rounded text-slate-300">Після заміни оливи</span>
+                    <span class="bg-slate-900 border border-slate-700 px-2 py-0.5 rounded text-slate-300">Після заміни демпфера</span>
+                </div>
+            </div>
+
+            <h2 class="font-tech text-lg uppercase text-white font-bold leading-tight mb-2">
+                Коробка пинається при гальмуванні зі 2-ї на 1-шу передачу?
+            </h2>
+            <p class="text-slate-300 text-sm leading-relaxed mb-4">
+                На регламентному ТО кожні 45–50 тис. км або після заміни пакету дисків/демпфера в'язкість та зазори змінюються. Соленоїди тиснуть по старих налаштуваннях, викликаючи сильний копняк. 
+                <strong class="text-hud-cyan">Ми калібруємо соленоїди тиску та точку торкання мокрого пакету на виїзді прямо в авто.</strong>
+            </p>
+
+            <!-- Telegram Primary CTA -->
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Замовити адаптацію в Telegram</span>
+            </a>
+            <div class="text-center text-[11px] text-slate-400 font-tech mt-2">
+                Усунення пинків за 1 виїзд • Без демонтажу коробки
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 2. WHY 6DCT450 KICKS (THE ROOT CAUSES) -->
+    <section class="px-4 py-3 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Коли адаптація MPS6 обов'язкова:
+            </h2>
+        </div>
+
+        <div class="space-y-3 font-tech">
+            
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-cyan-500/10 border border-cyan-500/30 text-hud-cyan flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-oil-can"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Після заміни мастила (кожні 45–50 тис. км)</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Свіжа рідина має іншу текучість. Блок управління продовжує розраховувати тиск як на старій оливі, що призводить до жорсткого змикання пакетів.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-amber-500/10 border border-amber-500/30 text-hud-yellow flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-gears"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Після заміни демпфера або фрикціонів</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Новий пакет дисків має нульовий знос. Без прописування нових зазорів у софті коробка буде вдаряти при перемиканнях вгору та вниз.
+                    </p>
+                </div>
+            </div>
+
+            <div class="p-3.5 bg-hud-card border border-hud-border rounded-lg flex items-start gap-3">
+                <div class="w-8 h-8 rounded bg-rose-500/10 border border-rose-500/30 text-hud-red flex items-center justify-center flex-shrink-0 text-sm">
+                    <i class="fa-solid fa-traffic-light"></i>
+                </div>
+                <div>
+                    <h3 class="text-sm font-bold text-white uppercase">Міський режим і пробки в Києві</h3>
+                    <p class="text-xs text-slate-300 font-sans mt-0.5 leading-snug">
+                        Постійні старт-стопи збивають температурні карти адаптацій. З'являється вібрація кузова на світлофорі в положенні «D».
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 3. SUPPORTED DIESEL VEHICLES -->
+    <section class="px-4 py-4 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Моделі авто, що обслуговуються:
+            </h2>
+        </div>
+
+        <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+            <div class="p-3 bg-hud-card border border-hud-border rounded">
+                <div class="text-hud-cyan font-bold">Ford Kuga 2.0 TDCi</div>
+                <span class="text-[11px] text-slate-400">MK1 / MK2 (дизель)</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded">
+                <div class="text-hud-cyan font-bold">Ford Mondeo 4 / 5</div>
+                <span class="text-[11px] text-slate-400">2.0 TDCi (дизель)</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded">
+                <div class="text-hud-cyan font-bold">Ford S-Max</div>
+                <span class="text-[11px] text-slate-400">2.0 TDCi (дизель)</span>
+            </div>
+            <div class="p-3 bg-hud-card border border-hud-border rounded">
+                <div class="text-hud-cyan font-bold">Ford Galaxy</div>
+                <span class="text-[11px] text-slate-400">2.0 TDCi (дизель)</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. WHAT WE DO ON-SITE (ENGINEERING PROCEDURES) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="flex items-center gap-2 mb-3">
+            <span class="w-2.5 h-2.5 bg-hud-cyan rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Що входить у виїзну процедуру:
+            </h2>
+        </div>
+
+        <div class="space-y-3">
+            
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-cyan border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-hud-cyan">01.</span>
+                    <span>Калібрування соленоїдів тиску гідроплити</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Програмне навчання електромагнітних клапанів гідроблоку MPS6. Вирівнює графік наростання тиску оливи, виключаючи удари при скиданні передач.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-hud-yellow border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-hud-yellow">02.</span>
+                    <span>Навчання точки контакту мокрого зчеплення</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Калібрування моменту початку зачеплення пакетів фрикционів (Clutch Touch Point). Повертає еталонну плавність початку руху та перемикання 1-2-3.
+                </p>
+            </div>
+
+            <div class="p-4 bg-hud-card border-l-4 border-l-emerald-500 border border-hud-border rounded-r-lg">
+                <div class="font-tech text-base uppercase text-white font-bold flex items-center gap-2">
+                    <span class="text-emerald-400">03.</span>
+                    <span>Адаптація вилок та синхронізаторів</span>
+                </div>
+                <p class="text-sm text-slate-300 mt-1 leading-snug font-sans">
+                    Синхронізація переміщення штоків перемикання у картері коробки. Усуває затримки вмикання передач та зависання обертів двигуна.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Quick TG Send Symptoms Button -->
+        <div class="mt-4">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-slate-900 border border-hud-cyan/50 text-hud-cyan hover:bg-hud-cyan hover:text-black font-tech text-base uppercase tracking-wider font-bold flex items-center justify-center gap-2 rounded-lg transition-colors text-center">
+                <i class="fa-brands fa-telegram text-lg"></i>
+                <span>Описати поведінку коробки у Telegram</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 5. TYPICAL MPS6 SYMPTOMS ACCORDION -->
+    <section class="px-4 py-4 max-w-md mx-auto" x-data="{ openItem: null }">
+        <div class="flex items-center gap-2 mb-2">
+            <span class="w-2.5 h-2.5 bg-hud-yellow rounded-sm"></span>
+            <h2 class="font-tech text-xl font-bold uppercase text-white tracking-wide">
+                Ознаки, що коробка потребує калібрування:
+            </h2>
+        </div>
+        <p class="text-xs text-slate-400 mb-4 font-tech">Торкніться для перегляду деталей:</p>
+
+        <div class="space-y-2.5">
+            
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 1 ? null : 1)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-sm uppercase">Копняк під зад при гальмуванні (2 ➔ 1)</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform ml-2" :class="openItem === 1 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 1" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Найпоширеніший симптом мокрого PowerShift. При уповільненні перед повною зупинкою машина отримує відчутний поштовх. Повністю усувається правильним навчанням соленоїдів тиску.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 2 ? null : 2)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-sm uppercase">Удар при переведенні з P у D або R</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform ml-2" :class="openItem === 2 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 2" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Свідчить про збиту нульову точку мокрого зчеплення. Диски стискаються з запізненням і надлишковим зусиллям.
+                </div>
+            </div>
+
+            <div class="bg-hud-card border border-hud-border rounded-lg overflow-hidden">
+                <button @click="openItem = (openItem === 3 ? null : 3)" class="w-full p-4 flex items-center justify-between text-left">
+                    <span class="font-tech font-bold text-hud-yellow text-sm uppercase">Тремтіння кузова на холостих у Drive</span>
+                    <i class="fa-solid fa-chevron-down text-slate-500 text-xs transition-transform ml-2" :class="openItem === 3 ? 'rotate-180 text-hud-cyan' : ''"></i>
+                </button>
+                <div x-show="openItem === 3" x-collapse class="px-4 pb-4 text-sm text-slate-300 border-t border-slate-800/80 pt-3 font-sans">
+                    Коли авто стоїть на світлофорі на передачі «D» із затиснутим гальмом, зчеплення не розмикається повністю і навантажує дизельний мотор, викликаючи гул та вібрацію.
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 6. DISTRICTS OF SERVICE (KYIV) -->
+    <section class="px-4 py-6 max-w-md mx-auto">
+        <div class="p-5 hud-border rounded-xl">
+            <div class="flex items-center gap-2 mb-3">
+                <i class="fa-solid fa-location-dot text-hud-cyan"></i>
+                <h2 class="font-tech text-lg font-bold uppercase text-white tracking-wide">
+                    Виїзд по 6 районах Києва:
+                </h2>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 text-xs font-tech">
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Солом'янський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Голосіївський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Печерський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Подільський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Святошинський</div>
+                <div class="p-2.5 bg-black/50 border border-slate-800 text-slate-200 rounded">📍 Шевченківський</div>
+            </div>
+            <p class="text-[11px] text-slate-400 mt-2 font-tech">
+                *Прибуваємо на СТО, паркінг або у двір зі спеціалізованим софтом.
+            </p>
+        </div>
+    </section>
+
+    <!-- 7. FINAL BOTTOM CTA BLOCK -->
+    <section class="px-4 py-8 max-w-md mx-auto text-center">
+        <div class="p-6 bg-gradient-to-b from-slate-900 to-black border border-hud-cyan/40 rounded-2xl shadow-hud-cyan">
+            <h2 class="font-tech text-2xl font-bold uppercase text-white mb-2 leading-tight">
+                Коробка продовжує пинатися після заміни оливи?
+            </h2>
+            <p class="text-slate-300 text-sm mb-6 leading-relaxed font-sans">
+                Не чекайте, поки зчеплення зносить новий демпфер. Напишіть у Telegram — майстер приїде та відкалібрує гідравліку MPS6 під параметри вашої трансмісії.
+            </p>
+
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-4 bg-hud-tg hover:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-3 rounded-lg shadow-hud-tg transition-transform active:scale-95 text-center">
+                <i class="fa-brands fa-telegram text-2xl"></i>
+                <span>Написати майстру в Telegram</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 8. PERSISTENT FIXED MOBILE FOOTER (FAST THUMB TAP) -->
+    <div class="fixed bottom-0 left-0 right-0 z-50 p-3 bg-slate-950/95 border-t border-hud-border/80 backdrop-blur-xl">
+        <div class="max-w-md mx-auto">
+            <a href="https://t.me/your_telegram_bot" target="_blank" rel="noopener" class="w-full py-3.5 bg-hud-tg active:bg-sky-500 text-white font-tech text-lg uppercase tracking-wider font-bold flex items-center justify-center gap-2.5 rounded-lg shadow-hud-tg">
+                <i class="fa-brands fa-telegram text-2xl animate-pulse"></i>
+                <span>Адаптація 6DCT450 • Telegram</span>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
